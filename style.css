@@ -1,0 +1,19 @@
+body{
+    height: 200vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    width: 100%;
+    opacity: 1;
+   transition: all 5s ;
+    
+
+}
+
+.content.active{
+    background: #000;
+    color: whitesmoke;
+    padding: 30px;
+}
