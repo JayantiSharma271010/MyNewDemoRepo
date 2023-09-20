@@ -20,3 +20,17 @@ window.addEventListener('scroll',function(){
 })
 
 
+const leftPara = document.querySelector('.left-animation')
+const rightPara = document.querySelector('.right-animation')
+let imgContainer = document.querySelector('.img-animation')
+
+window.addEventListener('scroll',()=>{
+    const windowInnerHeight = window.innerHeight
+    const scrollPosition = window.scrollY
+
+    if(scrollPosition > leftPara.offsetTop - windowInnerHeight / 2 && scrollPosition > rightPara.offsetTop - windowInnerHeight / 2 && scrollPosition > imgContainer.offsetTop - windowInnerHeight / 2){
+        leftPara.classList.add('slide-in-left')
+        rightPara.classList.add('slide-in-left')
+        imgContainer.classList.add('img-animation-active')
+    }
+})

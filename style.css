@@ -17,3 +17,43 @@ body{
     color: whitesmoke;
     padding: 30px;
 }
+
+
+.animation-container{
+    width: 100%;
+
+}
+
+.left-animation
+{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity 5s ease-in-out, transform 4s ease-in-out;
+}
+
+.right-animation{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 5s ease-in-out, transform 4s ease-in-out;
+}
+.slide-in-left{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.img-animation{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400xp;
+    margin: auto;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 5s ease-in-out, transform 4s ease-in-out;
+}
+
+.img-animation-active{
+    transform: translateY(0);
+    opacity: 1;
+}
