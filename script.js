@@ -1,4 +1,5 @@
 const content = document.querySelector('.content')
+let isActive = false
 
 window.addEventListener('scroll',function(){
     const windowHeight =   window.innerHeight
@@ -7,6 +8,15 @@ window.addEventListener('scroll',function(){
 
     if(windowScroll > contentHeight - windowHeight /2){
         content.classList.add('active')
+        isActive = true
+    }
+
+    else {
+        content.classList.remove('active')
+        isActive = false
     }
     
+    
 })
+
+
