@@ -4,6 +4,9 @@ body{
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 .content{
     width: 100%;
     opacity: 1;

@@ -34,3 +34,37 @@ window.addEventListener('scroll',()=>{
         imgContainer.classList.add('img-animation-active')
     }
 })
+
+
+// document.querySelectorAll('a[href^= "#"]').forEach(anchor =>{
+//     anchor.addEventListener('click',(e)=>{
+//         e.preventDefault()
+
+//         const targetID = anchor.getAttribute('href').slice(1)
+//         const targetElement = document.getElementById('targetID')
+
+//         window.scrollTo({
+//             top: targetElement.offsetTop,
+//             behavior: 'smooth'
+//         })
+//     })
+// })
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const targetID = anchor.getAttribute('href').slice(1);
+            const targetElement = document.getElementById(targetID);
+
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                left:0,
+                block:'start',
+                behavior: 'smooth',
+                duration:4000
+            });
+        });
+    });
+});
